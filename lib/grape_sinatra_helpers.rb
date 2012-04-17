@@ -112,7 +112,7 @@ module GrapeSinatraHelpers
         header 'ETag', value
 
         if etag_matches? request.env['HTTP_IF_NONE_MATCH'], new_resource
-          request.safe? ? error!('304 Not Modified', 304) : error!('412 Precondition Failed', 412)
+          safe_request? ? error!('304 Not Modified', 304) : error!('412 Precondition Failed', 412)
         end
 
         if request.env['HTTP_IF_MATCH']
@@ -150,6 +150,10 @@ module GrapeSinatraHelpers
         raise boom
       rescue Exception
         raise ArgumentError, "unable to convert #{value.inspect} to a Time object"
+      end
+
+      def safe_request?
+        request.get? or request.head? or request.options? or request.trace?
       end
 
     end
