@@ -6,7 +6,7 @@ Gem::Specification.new do |gem|
   gem.email         = ["dlindahl@customink.com"]
   gem.description   = %q{Small subset of Sinatra helper methods ported to Grape}
   gem.summary       = %q{A small subset of Sinatra::Base helper methods that have been ported over to Grape}
-  gem.homepage      = ""
+  gem.homepage      = "http://dlindahl.github.com/grape_sinatra_helpers/"
 
   gem.files         = `git ls-files`.split($\)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
