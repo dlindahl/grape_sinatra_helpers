@@ -1,6 +1,14 @@
-# GrapeSinatraHelpers
+# Grape Sinatra Helpers
 
-TODO: Write a gem description
+This is a small subset of helper methods available in `Sinatra::Base` that I
+have ported over to [Grape]
+
+* `cache_control`
+* `expires`
+* `last_modified`
+* `etag`
+
+And a few others that the above directly depend on.
 
 ## Installation
 
@@ -18,7 +26,11 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Use these methods as you normally would with the Sinatra equivalent.
+
+## TODO
+
+* Port over Sinatra test cases
 
 ## Contributing
 
@@ -27,3 +39,5 @@ TODO: Write usage instructions here
 3. Commit your changes (`git commit -am 'Added some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
+
+[grape]: https://github.com/intridea/grape

@@ -4,8 +4,8 @@ require File.expand_path('../lib/grape_sinatra_helpers/version', __FILE__)
 Gem::Specification.new do |gem|
   gem.authors       = ["Derek Lindahl"]
   gem.email         = ["dlindahl@customink.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
+  gem.description   = %q{Small subset of Sinatra helper methods ported to Grape}
+  gem.summary       = %q{A small subset of Sinatra::Base helper methods that have been ported over to Grape}
   gem.homepage      = ""
 
   gem.files         = `git ls-files`.split($\)
